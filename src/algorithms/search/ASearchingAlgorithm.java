@@ -13,7 +13,7 @@ public abstract class ASearchingAlgorithm implements ISearchingAlgorithm {
 
     public abstract String getName();
 
-    public int getNumberOfVisitedNodes() {
+    public int getNumberOfNodesEvaluated() {
         return visitedNodes;
     }
 }

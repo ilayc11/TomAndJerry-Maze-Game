@@ -8,5 +8,5 @@ public interface ISearchingAlgorithm {
 
     public String getName();
 
-    int getNumberOfVisitedNodes();
+    int getNumberOfNodesEvaluated();
 }
