@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="yes" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e55c0936-7ea8-48d6-8374-47ba5cb6906b" />
+        <option name="url" value="https://github.com/ilayc11/AdvancedTopics" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NVLaeoiEb6VT3yYsvKmYa47poL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ilay/Desktop/Advanced Topics",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed\mazeGenerators" />
+      <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\algorithms\search" />
+      <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.RunSearchOnMaze">
+    <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.Check" />
+      <module name="AdvancedTopics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyMazeGenerator2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator2" />
+      <module name="AdvancedTopics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
+      <module name="AdvancedTopics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunSearchOnMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="test.RunSearchOnMaze" />
+      <module name="AdvancedTopics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="algorithms.mazeGenerators.MyMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator" />
+      <module name="AdvancedTopics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RunSearchOnMaze" />
+        <item itemvalue="Application.MyMazeGenerator2" />
+        <item itemvalue="Application.RunMazeGenerator" />
+        <item itemvalue="Application.algorithms.mazeGenerators.MyMazeGenerator" />
+        <item itemvalue="Application.Check" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="" />
+      <created>1679744369157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679744369157</updated>
+      <workItem from="1679744370295" duration="993000" />
+      <workItem from="1679899227261" duration="22355000" />
+      <workItem from="1679935632417" duration="5000" />
+      <workItem from="1680014495006" duration="90000" />
+      <workItem from="1680196735039" duration="6935000" />
+      <workItem from="1680238370730" duration="1608000" />
+      <workItem from="1680267222690" duration="5084000" />
+      <workItem from="1680349801027" duration="1525000" />
+      <workItem from="1680356219535" duration="42000" />
+      <workItem from="1680521348349" duration="36000" />
+      <workItem from="1680591516823" duration="2669000" />
+      <workItem from="1680594226574" duration="36000" />
+      <workItem from="1680594386950" duration="98000" />
+      <workItem from="1680594500479" duration="110000" />
+      <workItem from="1680594630124" duration="96000" />
+      <workItem from="1680594949406" duration="8602000" />
+      <workItem from="1680604444467" duration="2766000" />
+      <workItem from="1680610667219" duration="266000" />
+    </task>
+    <task id="LOCAL-00001" summary="yes">
+      <created>1679744522545</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679744522545</updated>
+    </task>
+    <task id="LOCAL-00002" summary="yes">
+      <created>1679744631481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679744631481</updated>
+    </task>
+    <task id="LOCAL-00003" summary="yes">
+      <created>1679744764775</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679744764775</updated>
+    </task>
+    <task id="LOCAL-00004" summary="yes">
+      <created>1679899393149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679899393149</updated>
+    </task>
+    <task id="LOCAL-00005" summary="yes">
+      <created>1679900817425</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679900817425</updated>
+    </task>
+    <task id="LOCAL-00006" summary="yes">
+      <created>1679901748768</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679901748769</updated>
+    </task>
+    <task id="LOCAL-00007" summary="yes">
+      <created>1679902340872</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679902340872</updated>
+    </task>
+    <task id="LOCAL-00008" summary="yes">
+      <created>1679902440861</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679902440861</updated>
+    </task>
+    <task id="LOCAL-00009" summary="yes">
+      <created>1679909326809</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679909326809</updated>
+    </task>
+    <task id="LOCAL-00010" summary="yes">
+      <created>1679919487645</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679919487645</updated>
+    </task>
+    <task id="LOCAL-00011" summary="yes">
+      <created>1679919734765</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679919734765</updated>
+    </task>
+    <task id="LOCAL-00012" summary="yes">
+      <created>1679919767579</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679919767579</updated>
+    </task>
+    <task id="LOCAL-00013" summary="yes">
+      <created>1679928920177</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679928920177</updated>
+    </task>
+    <task id="LOCAL-00014" summary="yes">
+      <created>1679928972553</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679928972553</updated>
+    </task>
+    <task id="LOCAL-00015" summary="yes">
+      <created>1679929852218</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679929852218</updated>
+    </task>
+    <task id="LOCAL-00016" summary="yes">
+      <created>1679930417463</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679930417463</updated>
+    </task>
+    <task id="LOCAL-00017" summary="yes">
+      <created>1680201385846</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680201385846</updated>
+    </task>
+    <task id="LOCAL-00018" summary="yes">
+      <created>1680201451760</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1680201451760</updated>
+    </task>
+    <task id="LOCAL-00019" summary="yes">
+      <created>1680201458902</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680201458902</updated>
+    </task>
+    <task id="LOCAL-00020" summary="yes">
+      <created>1680201787620</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1680201787620</updated>
+    </task>
+    <task id="LOCAL-00021" summary="yes">
+      <created>1680272374592</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1680272374592</updated>
+    </task>
+    <task id="LOCAL-00022" summary="yes">
+      <created>1680272388740</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680272388740</updated>
+    </task>
+    <task id="LOCAL-00023" summary="yes">
+      <created>1680272401179</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1680272401179</updated>
+    </task>
+    <task id="LOCAL-00024" summary="yes">
+      <created>1680272466673</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680272466673</updated>
+    </task>
+    <task id="LOCAL-00025" summary="yes">
+      <created>1680272494977</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1680272494977</updated>
+    </task>
+    <task id="LOCAL-00026" summary="yes">
+      <created>1680278357749</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1680278357749</updated>
+    </task>
+    <task id="LOCAL-00027" summary="yes">
+      <created>1680278366418</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1680278366419</updated>
+    </task>
+    <task id="LOCAL-00028" summary="yes">
+      <created>1680356241179</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1680356241179</updated>
+    </task>
+    <task id="LOCAL-00029" summary="yes">
+      <created>1680356252186</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1680356252186</updated>
+    </task>
+    <task id="LOCAL-00030" summary="yes">
+      <created>1680591531843</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1680591531843</updated>
+    </task>
+    <task id="LOCAL-00031" summary="yes">
+      <created>1680603693581</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1680603693581</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="yes" />
+    <option name="LAST_COMMIT_MESSAGE" value="yes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java</url>
+          <line>66</line>
+          <properties class="algorithms.mazeGenerators.MyMazeGenerator" method="createPassage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
