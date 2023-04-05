@@ -56,10 +56,17 @@ public class SearchableMaze implements ISearchable{
 
                 // Check all the 8 options beside the cur position and if valid add to neighbours
                 if (curRow+row < maze.getRow() && curRow+row >= 0 && curCol+col >= 0  && curCol+col < maze.getCol() ) {
-
                     if (!curGrid[curRow + row][curCol + col].isWall() )
                         neighbors.add(new MazeState(curGrid[curRow + row][curCol + col]));
                 }
+               // if(curRow== maze.getRow()-1&&curCol==maze.getCol()-2||curRow==)
+
+
+                if ((curRow==maze.getRow()-1&&curCol+col==maze.getCol()-1)) {
+                    if (!curGrid[curRow + row][curCol].isWall())
+                        neighbors.add(new MazeState(curGrid[curRow][curCol+col]));
+                }
+
             }
         }
         return neighbors;

@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AdvancedTopics:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="yes">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/AdvancedTopics_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AdvancedTopics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ATP-Project-PartA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AdvancedTopics_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AdvancedTopics_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/ASearchingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/ASearchingAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/ISearchingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/ISearchingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,27 +65,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ilay/Desktop/Advanced Topics/ATP-Project-PartA/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ilay/Desktop/Advanced Topics/ATP-Project-PartA/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed\mazeGenerators" />
@@ -90,7 +99,7 @@
   <component name="RunManager" selected="Application.RunSearchOnMaze">
     <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.Check" />
-      <module name="AdvancedTopics" />
+      <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.mazeGenerators.*" />
@@ -103,7 +112,7 @@
     </configuration>
     <configuration name="MyMazeGenerator2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator2" />
-      <module name="AdvancedTopics" />
+      <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.mazeGenerators.*" />
@@ -114,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
-      <module name="AdvancedTopics" />
+    <configuration name="PGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.PGraph" />
+      <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,7 +140,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="test.RunSearchOnMaze" />
-      <module name="AdvancedTopics" />
+      <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -144,7 +153,7 @@
     </configuration>
     <configuration name="algorithms.mazeGenerators.MyMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator" />
-      <module name="AdvancedTopics" />
+      <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.mazeGenerators.*" />
@@ -158,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunSearchOnMaze" />
-        <item itemvalue="Application.MyMazeGenerator2" />
-        <item itemvalue="Application.RunMazeGenerator" />
         <item itemvalue="Application.algorithms.mazeGenerators.MyMazeGenerator" />
+        <item itemvalue="Application.PGraph" />
         <item itemvalue="Application.Check" />
+        <item itemvalue="Application.MyMazeGenerator2" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +200,8 @@
       <workItem from="1680594949406" duration="8602000" />
       <workItem from="1680604444467" duration="2766000" />
       <workItem from="1680610667219" duration="266000" />
+      <workItem from="1680629553366" duration="848000" />
+      <workItem from="1680676070240" duration="7672000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -423,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680611256261</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="yes">
+      <created>1680612381738</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1680612381738</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,18 +463,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="yes" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java</url>
-          <line>66</line>
-          <properties class="algorithms.mazeGenerators.MyMazeGenerator">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="curState" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

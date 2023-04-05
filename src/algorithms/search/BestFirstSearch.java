@@ -82,7 +82,6 @@ public class BestFirstSearch extends ASearchingAlgorithm{
             }
             closeList.add(curState);
         }
-
         return null;
     }
 
