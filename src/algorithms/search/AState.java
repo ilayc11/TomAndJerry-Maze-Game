@@ -11,7 +11,7 @@ public abstract class AState implements Comparator<AState> {
 
     @Override
     public int compare(AState o1, AState o2) {
-        /* TODO
+        /*
          Compare Astates based on their cost
          This method is basically for Best First Search algorithm,
          so we will be able to determine the best path by cost

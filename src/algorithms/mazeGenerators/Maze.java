@@ -1,7 +1,13 @@
 package algorithms.mazeGenerators;
 
 public class Maze {
-
+    /**
+     * This class represents the Maze itself.
+     * The Maze build of 2D array of positions. Each
+     * position can be either path or wall ( if the position
+     * is wall then let it be True)
+     * The Maze have starting and ending position.
+     */
     private Position[][]Grid;
     private Position startPos;
     private Position endPos;

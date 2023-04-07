@@ -3,6 +3,11 @@ package algorithms.mazeGenerators;
 import java.util.Random;
 
 public class SimpleMazeGenerator extends AMazeGenerator {
+    /**
+     * This class goal is to generate simple maze each time by first creating
+     * a maze full of walls, from the first row make every other row a row full of paths,
+     * finally, break every row of walls in a random place so that the maze will be solvable.
+     */
     static Random rand = new Random();
     public SimpleMazeGenerator() {}
 
