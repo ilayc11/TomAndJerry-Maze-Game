@@ -4,6 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Solution implements Serializable {
+    /**
+     * The class Solution represents solution to some game.
+     * The solution will be displayed as list of states in the game
+     * that lead from the starting point to the end point in the game.
+     */
     private volatile int numOfSteps;
     private ArrayList<AState>  solution;
 

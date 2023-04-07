@@ -3,76 +3,66 @@ package algorithms.mazeGenerators;
 import java.util.Random;
 
 public class SimpleMazeGenerator extends AMazeGenerator {
-    Random rand = new Random();
+    /**
+     * This class goal is to generate simple maze each time by first creating
+     * a maze full of walls, from the first row make every other row a row full of paths,
+     * finally, break every row of walls in a random place so that the maze will be solvable.
+     */
+    static Random rand = new Random();
     public SimpleMazeGenerator() {}
 
     @Override
     public Maze generate(int row, int col){
+        /*
+        In this method, we generate simple maze easily by first creating maze
+        full of walls, then each row will be or full of walls or full of paths.
+        Finally, we're randomly creating single path in each row that represents walls row.
+         */
         if( row < 1 || col < 1){
             return null;
         }
-        Maze maze = new Maze(row,col);
-
-        // initialize the maze with walls :
-
-        if( row < 4 || col < 4){
-            createDefaultMaze(maze);
-            return maze;
-        }
-
-        Position start = new Position(0, rand.nextInt(col));
-        maze.setStartPosition(start);
-
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                if(rand.nextInt(2) == 0) maze.setWallState(new Position(i,j),false);
+        Maze maze = new Maze(row, col);
+        /*
+         generate maze that from the first row, each row will look like that:
+         {path,path,path,path....wall}
+         {wall,wall,wall,wall...wall}
+         {path,path,path,path....wall}
+         {wall,wall,wall,wall...wall}
+         note : still doesn't count for starting position and ending position.
+         */
+        for(int i = 0; i < row; i++)
+            for(int j = 0; j< col; j++) {
+                if (i % 2 == 0)
+                    maze.setWallState(new Position(i, j), false);
+                else
+                    maze.setWallState(new Position(i,j), true);
             }
-        }
-
-        Position end = new Position(row -1, rand.nextInt(col));
+        /*
+        Generating starting & ending position for the maze
+         */
+        Position start = new Position(0,0);
+        Position end = new Position(row -1,col -1);
+        maze.setStartPosition(start);
         maze.setGoalPosition(end);
-
-        createPassage(start, end, maze);
+        /*
+        Now, the algorithm creates single path in each row of walls :
+         */
+        for(int i = 0; i < row; i++)
+            if(i % 2 ==1) { // if we in walls row, create random path
+                int r = getRandomNumberInRange(col -1);
+                maze.setWallState(new Position(i, r), false);
+            }
         return maze;
-
     }
 
-    private void createDefaultMaze(Maze maze){
-
-        for(int i=0;i< maze.getCol();i++){
-            maze.setWallState(new Position(0, i), false);
-        }
-        maze.setStartPosition(new Position(0,0));
-        maze.setGoalPosition(new Position(0, maze.getCol() -1));
-    }
-
-    private void createPassage(Position start, Position goal, Maze maze){
-        Position initial,target;
-        if(start.getRowIndex() < goal.getRowIndex()){
-            initial = start;
-            target = goal;
-        }
-        else {
-            target = start;
-            initial = goal;
-        }
-
-        for(int i = initial.getRowIndex()+1 ;i<= target.getRowIndex() ;i++){
-            maze.setWallState(new Position(i, initial.getColumnIndex()), false);
-        }
-
-        int targetRow = target.getRowIndex();
-        if(initial.getColumnIndex() > target.getColumnIndex()){
-            Position temp = target;
-            target = initial;
-            initial = temp;
-
-        }
-
-        for(int i=initial.getColumnIndex()+1;i<target.getColumnIndex();i++){
-            maze.setWallState(new Position(targetRow, i), false);
-        }
-
+    private static int getRandomNumberInRange(int colNum) {
+        /*
+        Private method to generate number in the range of 0 to the number of columns
+        in the maze. The idea is to help build simple & random mazes that each time
+        we generate maze, we get different path in the maze to move, thus we cant
+        generate easily lots of different mazes.
+         */
+        return rand.nextInt(colNum + 1);
     }
 }
 

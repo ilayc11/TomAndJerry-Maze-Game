@@ -1,6 +1,13 @@
 package algorithms.mazeGenerators;
 
 public class Position {
+    /**
+     * This class represents position in the Maze.
+     * Each position has its row number and column number (indexes).
+     * Each position can be either a wall or path, and every
+     * position will be marked after visiting it during the solvation
+     * of the Maze.
+     */
     private int currRow, currCol;
     private boolean isWall,isVisited;
 
