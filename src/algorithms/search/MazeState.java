@@ -6,7 +6,11 @@ import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.Position;
 
 public class MazeState extends AState implements Serializable {
-
+    /**
+     * The class represents current state in the Maze.
+     * The class extends the abstract class Astate and implements the
+     * interface Serializable.
+     */
     private Position position;
 
     public MazeState() {position=null;}
@@ -15,8 +19,6 @@ public class MazeState extends AState implements Serializable {
         this.position = p;
         if(p != null) setState(position.toString());
     }
-
-
 
     @Override
     public boolean equals(Object os)
@@ -38,15 +40,11 @@ public class MazeState extends AState implements Serializable {
 
     @Override
     public void setCost(AState parentState) {
-
         MazeState parent = (MazeState) parentState;
-
         if (Math.abs(parent.getPosition().getRowIndex() - this.getPosition().getRowIndex()) == 1
                 && Math.abs(parent.getPosition().getColumnIndex() - this.getPosition().getColumnIndex()) == 1) {
-
             this.setCost(parent.getCost() + 15);
         }
-
         else{
             this.setCost(parent.getCost() + 10);
         }
