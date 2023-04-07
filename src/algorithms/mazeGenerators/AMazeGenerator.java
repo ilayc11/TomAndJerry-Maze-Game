@@ -7,7 +7,7 @@ public abstract class AMazeGenerator implements IMazeGenerator {
 
     @Override
     public long measureAlgorithmTimeMillis(int rows, int cols){
-        /*
+        /**
         The method measure the time takes to generate maze by generate()
         and returns long
          */

@@ -13,7 +13,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
 
     @Override
     public Maze generate(int row, int col){
-        /*
+        /**
         In this method, we generate simple maze easily by first creating maze
         full of walls, then each row will be or full of walls or full of paths.
         Finally, we're randomly creating single path in each row that represents walls row.
@@ -22,7 +22,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
             return null;
         }
         Maze maze = new Maze(row, col);
-        /*
+        /**
          generate maze that from the first row, each row will look like that:
          {path,path,path,path....wall}
          {wall,wall,wall,wall...wall}
@@ -56,7 +56,7 @@ public class SimpleMazeGenerator extends AMazeGenerator {
     }
 
     private static int getRandomNumberInRange(int colNum) {
-        /*
+        /**
         Private method to generate number in the range of 0 to the number of columns
         in the maze. The idea is to help build simple & random mazes that each time
         we generate maze, we get different path in the maze to move, thus we cant

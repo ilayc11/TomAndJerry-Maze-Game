@@ -9,14 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Made few changes in SimpleMazeGenerator so that starting point will be at (0,0) and ending (row-1, col-1).&#10;As well as changing the maze algorithm to create more interesting mazes than before. &#10;(Added explenations)">
+    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="yes">
+      <change beforePath="$PROJECT_DIR$/.idea/AdvancedTopics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ATP-Project-PartA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AdvancedTopics_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AdvancedTopics_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/AState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/AState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.PGraph" />
+    <configuration name="MyMazeGenerator2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator2" />
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
@@ -122,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
+    <configuration name="PGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.PGraph" />
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunSearchOnMaze" />
-        <item itemvalue="Application.RunMazeGenerator" />
         <item itemvalue="Application.algorithms.mazeGenerators.MyMazeGenerator" />
         <item itemvalue="Application.PGraph" />
         <item itemvalue="Application.Check" />
+        <item itemvalue="Application.MyMazeGenerator2" />
       </list>
     </recent_temporary>
   </component>
@@ -201,8 +202,6 @@
       <workItem from="1680610667219" duration="266000" />
       <workItem from="1680629553366" duration="848000" />
       <workItem from="1680676070240" duration="7672000" />
-      <workItem from="1680785940732" duration="7855000" />
-      <workItem from="1680857036508" duration="7039000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -442,14 +441,7 @@
       <option name="project" value="LOCAL" />
       <updated>1680612381738</updated>
     </task>
-    <task id="LOCAL-00035" summary="Made few changes in SimpleMazeGenerator so that starting point will be at (0,0) and ending (row-1, col-1).&#10;As well as changing the maze algorithm to create more interesting mazes than before. &#10;(Added explenations)">
-      <created>1680789449064</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1680789449064</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,8 +460,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yes" />
-    <MESSAGE value="Made few changes in SimpleMazeGenerator so that starting point will be at (0,0) and ending (row-1, col-1).&#10;As well as changing the maze algorithm to create more interesting mazes than before. &#10;(Added explenations)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made few changes in SimpleMazeGenerator so that starting point will be at (0,0) and ending (row-1, col-1).&#10;As well as changing the maze algorithm to create more interesting mazes than before. &#10;(Added explenations)" />
+    <option name="LAST_COMMIT_MESSAGE" value="yes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
