@@ -34,6 +34,79 @@ public class SearchableMaze implements ISearchable{
      */
     @Override
     public ArrayList<AState> getAllPossibleStates(AState s) {
+        ArrayList<AState> neighbors = new ArrayList<AState>();
+        MazeState mazeState = (MazeState) s;   // Casting s from Astate to mazeState
+        Position[][] curGrid = maze.getGrid();
+
+        Position curPosition = mazeState.getPosition();
+
+        int curRow = curPosition.getRowIndex();
+        int curCol = curPosition.getColumnIndex();
+
+        /*
+        check all 8 possible neighbours stating with the 2 slants that makes
+        the route to E much shorter [right+down] and [left+down] then moving
+        to
+         */
+        // [right + down] slant (if the solution exit is one of current state neighbour then add it as well) :
+        if(curRow + 1 < maze.getRow() && curCol + 1 < maze.getCol() && curRow+ 1 >= 0 && curCol+ 1 >= 0) {
+            if ((!curGrid[curRow + 1][curCol + 1].isWall()))
+                neighbors.add(new MazeState(curGrid[curRow + 1][curCol + 1]));
+            else { // check if the slant leads to E:
+                if(curRow + 1 == this.endState.getPosition().getRowIndex() && curCol + 1 == this.endState.getPosition().getColumnIndex())
+                    neighbors.add(new MazeState(curGrid[curRow + 1][curCol + 1]));
+            }
+        }
+        // [left + down] slant :
+        if(curRow + 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow + 1 >= 0 && curCol - 1 >= 0)
+            if(!curGrid[curRow + 1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol -1]));
+        // [right + up] slant :
+        if(curRow - 1 < maze.getRow() && curCol + 1 < maze.getCol() && curRow - 1 >= 0 && curCol + 1 >= 0)
+            if(!curGrid[curRow - 1][curCol + 1].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol + 1]));
+        // [just down] :
+        if(curRow + 1 < maze.getRow() && curRow + 1 >= 0)
+            if(!curGrid[curRow + 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol]));
+        // [just right] :
+        if(curCol + 1 < maze.getCol() && curCol + 1 >= 0)
+            if(!curGrid[curRow][curCol +1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol + 1]));
+        // [just left ] :
+        if(curCol - 1  < maze.getCol() && curCol - 1 >= 0)
+            if(!curGrid[curRow][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol - 1]));
+        // [just up ] :
+        if(curRow - 1 < maze.getRow() && curRow - 1 >= 0 )
+            if(!curGrid[curRow - 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol]));
+        // [left + up] slant :
+        if(curRow - 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow - 1 >= 0 && curCol - 1 >= 0)
+            if(!curGrid[curRow -  1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol - 1]));
+
+        return neighbors;
+    }
+    /*
+    @Override
+    public ArrayList<AState> getAllPossibleStates(AState s) {
+        ArrayList<AState> neighbors = new ArrayList<AState>();
+        MazeState mazeState = (MazeState) s;   // Casting s from Astate to mazeState
+        Position[][] curGrid = maze.getGrid();
+
+        Position curPosition = mazeState.getPosition();
+
+        int curRow = curPosition.getRowIndex();
+        int curCol = curPosition.getColumnIndex();
+
+        for (int row=-1; row<2; row++){
+            for (int col=-1; col<2; col++){
+                if (row == 0 && col == 0) continue;
+                // Check all the 8 options beside the cur position and if valid add to neighbours
+                if (curRow+row < maze.getRow() && curRow+row >= 0 && curCol+col >= 0  && curCol+col < maze.getCol() )
+                    if (!curGrid[curRow + row][curCol + col].isWall() ) neighbors.add(new MazeState(curGrid[curRow + row][curCol + col]));
+            }
+        }
+        return neighbors;
+    }
+    */ // TODO DELETE
+    /*
+    @Override
+    public ArrayList<AState> getAllPossibleStates(AState s) {
 
         ArrayList<AState> neighbors = new ArrayList<AState>();
 
@@ -72,6 +145,8 @@ public class SearchableMaze implements ISearchable{
         return neighbors;
     }
 
+
+     */ // TODO DELETE
     /**
      * This function cleaning the maze by setting all the cells to unvisited for the next search algorithm to solve it.
      * @return Int number of the cells that been visited in the search.
@@ -87,7 +162,6 @@ public class SearchableMaze implements ISearchable{
                     numOfNodesVisited++;
                 }
                 maze.getGrid()[row][col].setIsVisited(false);
-
             }
         }
         return numOfNodesVisited;

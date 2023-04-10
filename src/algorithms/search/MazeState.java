@@ -35,9 +35,35 @@ public class MazeState extends AState implements Serializable {
         position.setIsVisited(visited);
     }
 
+
     @Override
     public boolean isVisited() {return position.isVisited();}
-
+    
+    @Override
+    public void setCost(AState parentState) {
+        MazeState parent = (MazeState) parentState;
+        if((Math.abs(this.getPosition().getRowIndex() - parent.getPosition().getRowIndex()) == 0 &&
+                Math.abs(this.getPosition().getColumnIndex() - parent.getPosition().getColumnIndex()) == 1) ||
+                (Math.abs(this.getPosition().getRowIndex() - parent.getPosition().getRowIndex()) == 1 &&
+                        Math.abs(this.getPosition().getColumnIndex() - parent.getPosition().getColumnIndex()) == 0)) {
+            MazeState parentOfparent = (MazeState)parent.getParentState();
+            if(parentOfparent != null)
+                if ((Math.abs(parent.getPosition().getRowIndex() - parentOfparent.getPosition().getRowIndex()) == 1 &&
+                        Math.abs(parent.getPosition().getColumnIndex() - parentOfparent.getPosition().getColumnIndex()) == 0) ||
+                        (Math.abs(parent.getPosition().getRowIndex() - parentOfparent.getPosition().getRowIndex()) == 0 &&
+                                Math.abs(parent.getPosition().getColumnIndex() - parentOfparent.getPosition().getColumnIndex()) == 1)) {
+                    /*
+                    In case there are available slant, set current position parent to be the
+                    parent of current parent & updated the cost to 15. (thus slant) //TODO check if working
+                     */
+                    this.setCost(parent.getCost() + 15);
+                    this.setParentState(parentOfparent);
+                }
+            else this.setCost(parent.getCost() + 10);
+        }
+        else this.setCost(parent.getCost() + 10);
+    }
+/*
     @Override
     public void setCost(AState parentState) {
         MazeState parent = (MazeState) parentState;
@@ -50,6 +76,8 @@ public class MazeState extends AState implements Serializable {
         }
     }
 
+
+ */
 
     @Override
     public String toString() {
