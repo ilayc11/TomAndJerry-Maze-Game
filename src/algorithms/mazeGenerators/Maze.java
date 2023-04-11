@@ -69,5 +69,12 @@ public class Maze {
             System.out.println();
         }
     }
+    public void breakAllWalls(){
+        for(int i=0;i<this.getRow();i++){
+            for(int j=0;j<getCol();j++){
+                Grid[i][j].setIsWall(false);
+            }
+        }
+    }
 
 }
