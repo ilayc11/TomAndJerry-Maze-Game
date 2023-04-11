@@ -13,11 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/AState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/AState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,22 +91,9 @@
       <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunSearchOnMaze">
+  <component name="RunManager" selected="Application.RunMazeGenerator">
     <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.Check" />
-      <module name="ATP-Project-PartA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyMazeGenerator2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator2" />
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
@@ -128,6 +111,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="algorithms.mazeGenerators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
+      <module name="ATP-Project-PartA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunMazeGenerator" />
         <item itemvalue="Application.RunSearchOnMaze" />
         <item itemvalue="Application.algorithms.mazeGenerators.MyMazeGenerator" />
         <item itemvalue="Application.PGraph" />
         <item itemvalue="Application.Check" />
-        <item itemvalue="Application.MyMazeGenerator2" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +197,7 @@
       <workItem from="1680610667219" duration="266000" />
       <workItem from="1680629553366" duration="848000" />
       <workItem from="1680676070240" duration="7672000" />
-      <workItem from="1681222120350" duration="5825000" />
+      <workItem from="1681222120350" duration="6149000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -441,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680612381738</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="yes">
+      <created>1681228009729</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228009729</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,6 +485,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/RunMazeGenerator.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

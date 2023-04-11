@@ -18,6 +18,8 @@ public class Maze {
                 Grid[i][j]=new Position(i,j);
             }
         }
+        this.endPos=new Position(rowNum-1,colNum-1);
+        this.startPos=new Position(0,0);
     }
     public int getCol(){
         return this.Grid[0].length;
@@ -59,12 +61,19 @@ public class Maze {
                 if (i == startPos.getRowIndex() && j == startPos.getColumnIndex())
                     System.out.print("S, ");
                 else if(i==endPos.getRowIndex() && j== endPos.getColumnIndex())
-                    System.out.print("E, ");
+                    System.out.print("E ");
                 else
                     if(Grid[i][j].isWall())
-                        System.out.print("1, ");
+                        if(j!=Grid[0].length-1)
+                            System.out.print("1, ");
+                        else
+                            System.out.print("1 ");
+
                     else
-                        System.out.print("0, ");
+                        if(j!=Grid[0].length-1)
+                            System.out.print("0, ");
+                        else
+                            System.out.print("0 ");
             System.out.print("}");
             System.out.println();
         }
