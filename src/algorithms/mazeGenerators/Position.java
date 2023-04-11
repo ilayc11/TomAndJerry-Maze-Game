@@ -12,6 +12,9 @@ public class Position {
     private boolean isWall,isVisited;
 
     public Position(int currRow, int currCol) {
+        /**
+         * init a new position as a Wall for easier faster maze creation and not visited for later use.
+         */
         this.currRow = currRow;
         this.currCol = currCol;
         this.isWall=true;

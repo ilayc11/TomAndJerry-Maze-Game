@@ -9,8 +9,8 @@ public class Maze {
      * The Maze have starting and ending position.
      */
     private Position[][]Grid;
-    private Position startPos;
-    private Position endPos;
+    private  Position startPos;
+    private  Position endPos;
     public Maze(int rowNum,int colNum){
         Grid=new Position[rowNum][colNum];
         for(int i=0;i<rowNum;i++){
