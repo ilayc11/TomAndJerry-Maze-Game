@@ -43,6 +43,7 @@ public class SearchableMaze implements ISearchable{
         int curRow = curPosition.getRowIndex();
         int curCol = curPosition.getColumnIndex();
 
+
         /*
         check all 8 possible neighbours stating with the 2 slants that makes
         the route to E much shorter [right+down] and [left+down] then moving
@@ -57,18 +58,19 @@ public class SearchableMaze implements ISearchable{
                     neighbors.add(new MazeState(curGrid[curRow + 1][curCol + 1]));
             }
         }
+        // [just down] :
+        if(curRow + 1 < maze.getRow() && curRow + 1 >= 0)
+            if(!curGrid[curRow + 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol]));
+        // [just right] :
+        if(curCol + 1 < maze.getCol() && curCol + 1 >= 0)
+            if(!curGrid[curRow][curCol +1].isWall())
+                neighbors.add(new MazeState(curGrid[curRow][curCol + 1]));
         // [left + down] slant :
         if(curRow + 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow + 1 >= 0 && curCol - 1 >= 0)
             if(!curGrid[curRow + 1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol -1]));
         // [right + up] slant :
         if(curRow - 1 < maze.getRow() && curCol + 1 < maze.getCol() && curRow - 1 >= 0 && curCol + 1 >= 0)
             if(!curGrid[curRow - 1][curCol + 1].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol + 1]));
-        // [just down] :
-        if(curRow + 1 < maze.getRow() && curRow + 1 >= 0)
-            if(!curGrid[curRow + 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol]));
-        // [just right] :
-        if(curCol + 1 < maze.getCol() && curCol + 1 >= 0)
-            if(!curGrid[curRow][curCol +1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol + 1]));
         // [just left ] :
         if(curCol - 1  < maze.getCol() && curCol - 1 >= 0)
             if(!curGrid[curRow][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol - 1]));

@@ -9,6 +9,8 @@ public class EmptyMazeGenerator extends AMazeGenerator {
      */
     @Override
     public Maze generate(int rowNum, int colNum){
+        if(rowNum<1||colNum<1)
+            return null;
         Maze tmp=new Maze(rowNum, colNum);
         tmp.breakAllWalls();
          return tmp;

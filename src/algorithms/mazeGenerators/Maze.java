@@ -20,6 +20,9 @@ public class Maze {
         }
         this.endPos=new Position(rowNum-1,colNum-1);
         this.startPos=new Position(0,0);
+        this.endPos.setIsWall(false);
+        this.startPos.setIsWall(false);
+
     }
     public int getCol(){
         return this.Grid[0].length;
