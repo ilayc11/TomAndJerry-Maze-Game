@@ -48,6 +48,6 @@ public class Position {
     }
     @Override
     public String toString() {
-        return "{" + currRow + "," + currCol + "}";
+        return "(" + currRow + "," + currCol + ")";
     }
 }

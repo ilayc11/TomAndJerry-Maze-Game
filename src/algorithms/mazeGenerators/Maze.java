@@ -59,7 +59,7 @@ public class Maze {
     public Position[][] getGrid(){return this.Grid;}
     public void print(){
         for (int i = 0; i < Grid.length; i++) {
-            System.out.print("{ ");
+            System.out.print("[ ");
             for (int j = 0; j < Grid[0].length; j++)
                 if (i == startPos.getRowIndex() && j == startPos.getColumnIndex())
                     System.out.print("S, ");
@@ -77,7 +77,7 @@ public class Maze {
                             System.out.print("0, ");
                         else
                             System.out.print("0 ");
-            System.out.print("}");
+            System.out.print("]");
             System.out.println();
         }
     }

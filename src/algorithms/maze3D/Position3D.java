@@ -51,6 +51,6 @@ public class Position3D {
     }
     @Override
     public String toString() {
-        return "{" +this.currDepth +","+ currRow + "," + currCol + "}";
+        return "(" +this.currDepth +","+ currRow + "," + currCol + ")";
     }
 }

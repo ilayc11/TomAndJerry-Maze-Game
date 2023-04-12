@@ -61,8 +61,6 @@ public class MazeState extends AState implements Serializable {
 
     @Override
     public String toString() {
-        return "MazeState{" +
-                "position=" + position +
-                '}';
+        return position.toString();
     }
 }

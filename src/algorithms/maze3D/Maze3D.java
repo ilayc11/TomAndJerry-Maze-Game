@@ -92,10 +92,10 @@ public class Maze3D {
      */
     public void print() {
         for (int k = 0; k < Grid.length; k++) {
-            System.out.print("{ ");
+            System.out.print("[ ");
             System.out.println();
             for (int i = 0; i < Grid.length; i++) {
-                System.out.print("{ ");
+                System.out.print("[ ");
                 for (int j = 0; j < Grid[0].length; j++)
                     if (k==startPos.getDepthIndex()&&i == startPos.getRowIndex() && j == startPos.getColumnIndex())
                         System.out.print("S, ");
@@ -111,10 +111,10 @@ public class Maze3D {
                         System.out.print("0, ");
                     else
                         System.out.print("0 ");
-                System.out.print("}");
+                System.out.print("]");
                 System.out.println();
             }
-            System.out.print(" }");
+            System.out.print(" ]");
             System.out.println();
         }
     }

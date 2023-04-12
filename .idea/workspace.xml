@@ -11,13 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JUnit/algorithms/search/BestFirstSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit/algorithms/search/BestFirstSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/maze3D/IMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/maze3D/IMaze3DGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/maze3D/Maze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/maze3D/Maze3DState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/maze3D/Maze3DState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/GeneralCheckingFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/GeneralCheckingFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RunMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMaze3DGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/maze3D/Position3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/maze3D/Position3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,9 +106,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BestFirstSearchTest">
-    <configuration name="GeneralCheckingFunctions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.GeneralCheckingFunctions" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ATP-Project-PartA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunMaze3DGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunMaze3DGenerator" />
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
@@ -121,8 +127,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunMaze3DGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunMaze3DGenerator" />
+    <configuration name="RunMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.RunMazeGenerator" />
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
@@ -149,19 +155,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algorithms.mazeGenerators.MyMazeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.mazeGenerators.MyMazeGenerator" />
-      <module name="ATP-Project-PartA" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="algorithms.mazeGenerators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BestFirstSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
@@ -179,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.RunMazeGenerator" />
+        <item itemvalue="Application.RunSearchOnMaze" />
         <item itemvalue="JUnit.BestFirstSearchTest" />
         <item itemvalue="Application.RunMaze3DGenerator" />
-        <item itemvalue="Application.GeneralCheckingFunctions" />
-        <item itemvalue="Application.RunSearchOnMaze" />
-        <item itemvalue="Application.algorithms.mazeGenerators.MyMazeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -477,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681303552330</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Finishing touches">
+      <created>1681305205541</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681305205541</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,6 +506,11 @@
           <url>file://$PROJECT_DIR$/src/test/RunMaze3DGenerator.java</url>
           <line>13</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/RunSearchOnMaze.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
