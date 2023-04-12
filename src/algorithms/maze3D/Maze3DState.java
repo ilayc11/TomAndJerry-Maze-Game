@@ -43,7 +43,9 @@ public class Maze3DState extends AState implements Serializable {
     public boolean isVisited() {return position.isVisited();}
 
 
-
+    /**
+     * same as 2d cost but now we dont have diagonal moves so costs are the same for all
+     */
     @Override
     public void setCost(AState parentState) {
         Maze3DState parent = (Maze3DState) parentState;
@@ -53,7 +55,7 @@ public class Maze3DState extends AState implements Serializable {
             this.setCost(parent.getCost() + 15);
             //
         } else
-            this.setCost(parent.getCost() + 20);
+            this.setCost(parent.getCost() + 15);
     }
 
 

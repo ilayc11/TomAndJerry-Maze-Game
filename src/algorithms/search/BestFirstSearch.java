@@ -38,6 +38,7 @@ public class BestFirstSearch extends ASearchingAlgorithm{
                     curNeighbor.setParentState(curState);
                     openList.add(curNeighbor);
                 }
+
                 /*
                 else{ // check if new path is better than the previous.
                     boolean fromQueueFlag = false;

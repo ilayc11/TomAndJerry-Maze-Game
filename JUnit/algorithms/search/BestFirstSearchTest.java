@@ -1,13 +1,24 @@
 package algorithms.search;
 
+import algorithms.mazeGenerators.IMazeGenerator;
 import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.MyMazeGenerator;
 import org.junit.jupiter.api.Test;
 
-public class BestFirstSearchTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class BestFirstSearchTest {
+
+    BestFirstSearch bfs = new BestFirstSearch();
     @Test
-    void TestMaze() {
-        MyMazeGenerator maze=new MyMazeGenerator();
-        maze.generate(100,100).print();
+    void solve() {
+
+        assertEquals(null,bfs.solve(null));
+
+    }
+
+    @Test
+    void getName() {
+        assertEquals("Best First Search",bfs.getName());
     }
 }

@@ -3,7 +3,7 @@ package algorithms.maze3D;
 public class Maze3D {
     /**
      * This class represents the Maze itself.
-     * The Maze build of 2D array of positions. Each
+     * The Maze build of 3d array of positions. Each
      * position can be either path or wall ( if the position
      * is wall then let it be True)
      * The Maze have starting and ending position.
@@ -11,7 +11,14 @@ public class Maze3D {
     private Position3D[][][]Grid;
     private  Position3D startPos;
     private  Position3D endPos;
+
+    /**
+     * @param depthnum depth num
+     * @param rowNum row num
+     * @param colNum col num
+     */
     public Maze3D(int depthnum,int rowNum,int colNum){
+
         Grid=new Position3D[depthnum][rowNum][colNum];
         for(int i=0;i<depthnum;i++){
             for(int j=0;j<rowNum;j++){
@@ -25,7 +32,11 @@ public class Maze3D {
         this.startPos.setIsWall(false);
 
     }
-    public int[][][] map3D(){
+
+    /**
+     * @return return 3d array of walls and passages as int[][][]
+     */
+    public int[][][] getMap(){
         int tmpDepth=getDepth(),tmpRow=this.getRow(),tmpCol=this.getCol();
         int[][][] tmp =new int[tmpDepth][tmpRow][tmpCol];
         for(int k=0;k<tmpDepth;k++)
@@ -76,6 +87,9 @@ public class Maze3D {
     }
     public Position3D[][][] getGrid(){return this.Grid;}
 
+    /**
+     * prints the maze
+     */
     public void print() {
         for (int k = 0; k < Grid.length; k++) {
             System.out.print("{ ");
@@ -104,6 +118,10 @@ public class Maze3D {
             System.out.println();
         }
     }
+
+    /**
+     * our maze starts with walls only, we added a function for breaking them all
+     */
     public void breakAllWalls(){
         for(int k=0;k<this.getDepth();k++)
          for(int i=0;i<this.getRow();i++)

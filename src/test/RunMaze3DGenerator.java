@@ -9,9 +9,9 @@ public class RunMaze3DGenerator {
     }
     private static void testMazeGenerator(IMaze3DGenerator mazeGenerator) {
         // prints the time it takes the algorithm to run
-        System.out.println(String.format("Maze generation time(ms): %s", mazeGenerator.measureAlgorithmTimeMillis(400/*depth*/,400/*rows*/, 400/*columns*/)));
+        System.out.println(String.format("Maze generation time(ms): %s", mazeGenerator.measureAlgorithmTimeMillis(500/*depth*/,500/*rows*/, 500/*columns*/)));
         // generate another maze
-        Maze3D maze = mazeGenerator.generate(400/*Depth*/,400/*rows*/, 400/*columns*/);
+        Maze3D maze = mazeGenerator.generate(500/*Depth*/,500/*rows*/, 500/*columns*/);
 
         // prints the maze
         maze.print();

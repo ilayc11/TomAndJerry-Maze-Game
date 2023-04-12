@@ -42,7 +42,9 @@ public class MazeState extends AState implements Serializable {
     public boolean isVisited() {return position.isVisited();}
 
 
-
+    /**
+     *
+     */
     @Override
     public void setCost(AState parentState) {
         MazeState parent = (MazeState) parentState;

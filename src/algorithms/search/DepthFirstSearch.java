@@ -6,6 +6,11 @@ public class DepthFirstSearch extends ASearchingAlgorithm {
 
     Stack<AState> openList = new Stack<>();
 
+    /**
+     * The method solves ISearchable object in breadth first search algorithm
+     * @param s ISearchable object
+     * @return LinkedList with Astates objects that represents the route to the solution
+     */
     @Override
     public Solution solve(ISearchable s) {
         AState start = s.getStartState();
