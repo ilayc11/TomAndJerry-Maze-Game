@@ -9,6 +9,7 @@ public abstract class AState implements Comparator<AState> {
     private int cost;
     private AState cameFrom;
 
+    public AState goalState;
     @Override
     public int compare(AState o1, AState o2) {
         /**
@@ -36,6 +37,7 @@ public abstract class AState implements Comparator<AState> {
     public boolean isVisited() {return visited;}
 
     public void setCost(AState parent) {}
+    public void setGoalState(AState goal){}
 
     public boolean getVisited() {return this.visited;}
 

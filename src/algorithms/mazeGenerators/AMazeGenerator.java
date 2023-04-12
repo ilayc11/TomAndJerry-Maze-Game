@@ -1,6 +1,9 @@
 package algorithms.mazeGenerators;
 
 public abstract class AMazeGenerator implements IMazeGenerator {
+    /**
+     * abstract class that implements IMazeGenerator interface
+     */
     public AMazeGenerator() {}
 
     public abstract Maze generate(int row, int cole);
