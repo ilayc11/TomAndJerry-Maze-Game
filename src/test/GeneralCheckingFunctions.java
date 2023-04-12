@@ -7,4 +7,5 @@ public class GeneralCheckingFunctions {
         boolean weChoseToDoTheMaze3DAssignment = false;
         return weChoseToDoTheMaze3DAssignment;
     }
+
 }
