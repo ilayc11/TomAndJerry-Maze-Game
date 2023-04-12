@@ -50,34 +50,68 @@ public class SearchableMaze implements ISearchable{
          */
         // [right + down] slant (if the solution exit is one of current state neighbour then add it as well) :
         if(curRow + 1 < maze.getRow() && curCol + 1 < maze.getCol() && curRow+ 1 >= 0 && curCol+ 1 >= 0) {
-            if ((!curGrid[curRow + 1][curCol + 1].isWall()))
-                neighbors.add(new MazeState(curGrid[curRow + 1][curCol + 1]));
+            if ((!curGrid[curRow + 1][curCol + 1].isWall())) neighbors.add(new MazeState(curGrid[curRow + 1][curCol + 1]));
             else { // check if the slant leads to E:
                 if(curRow + 1 == this.endState.getPosition().getRowIndex() && curCol + 1 == this.endState.getPosition().getColumnIndex())
                     neighbors.add(new MazeState(curGrid[curRow + 1][curCol + 1]));
             }
         }
         // [left + down] slant :
-        if(curRow + 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow + 1 >= 0 && curCol - 1 >= 0)
-            if(!curGrid[curRow + 1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol -1]));
+        if(curRow + 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow + 1 >= 0 && curCol - 1 >= 0) {
+            if (!curGrid[curRow + 1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol - 1]));
+            else { // check if the slant leads to E :
+                if (curRow + 1 == this.endState.getPosition().getRowIndex() && curCol - 1 == this.endState.getPosition().getColumnIndex())
+                    neighbors.add(new MazeState(curGrid[curRow + 1][curCol - 1]));
+            }
+        }
         // [right + up] slant :
-        if(curRow - 1 < maze.getRow() && curCol + 1 < maze.getCol() && curRow - 1 >= 0 && curCol + 1 >= 0)
-            if(!curGrid[curRow - 1][curCol + 1].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol + 1]));
+        if(curRow - 1 < maze.getRow() && curCol + 1 < maze.getCol() && curRow - 1 >= 0 && curCol + 1 >= 0) {
+            if (!curGrid[curRow - 1][curCol + 1].isWall())  neighbors.add(new MazeState(curGrid[curRow - 1][curCol + 1]));
+            else
+                if(curRow - 1 == this.endState.getPosition().getRowIndex() && curCol + 1 == this.endState.getPosition().getColumnIndex()) {
+                    neighbors.add(new MazeState(curGrid[curRow - 1][curCol + 1]));
+                }
+        }
         // [just down] :
-        if(curRow + 1 < maze.getRow() && curRow + 1 >= 0)
-            if(!curGrid[curRow + 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol]));
+        if(curRow + 1 < maze.getRow() && curRow + 1 >= 0) {
+            if (!curGrid[curRow + 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow + 1][curCol]));
+            else
+                if(curRow + 1 == this.endState.getPosition().getRowIndex() && curCol == this.endState.getPosition().getColumnIndex()){
+                    neighbors.add(new MazeState(curGrid[curRow + 1][curCol]));
+                }
+        }
         // [just right] :
-        if(curCol + 1 < maze.getCol() && curCol + 1 >= 0)
-            if(!curGrid[curRow][curCol +1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol + 1]));
+        if(curCol + 1 < maze.getCol() && curCol + 1 >= 0) {
+            if (!curGrid[curRow][curCol + 1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol + 1]));
+            else
+                if(curRow == this.endState.getPosition().getRowIndex() && curCol + 1 == this.endState.getPosition().getColumnIndex()){
+                    neighbors.add(new MazeState(curGrid[curRow][curCol + 1]));
+                }
+        }
         // [just left ] :
-        if(curCol - 1  < maze.getCol() && curCol - 1 >= 0)
-            if(!curGrid[curRow][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol - 1]));
+        if(curCol - 1  < maze.getCol() && curCol - 1 >= 0) {
+            if (!curGrid[curRow][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow][curCol - 1]));
+            else
+                if(curRow == this.endState.getPosition().getRowIndex() && curCol - 1 == this.endState.getPosition().getColumnIndex()){
+                    neighbors.add(new MazeState(curGrid[curRow][curCol - 1]));
+                }
+        }
         // [just up ] :
-        if(curRow - 1 < maze.getRow() && curRow - 1 >= 0 )
-            if(!curGrid[curRow - 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol]));
+        if(curRow - 1 < maze.getRow() && curRow - 1 >= 0 ) {
+            if (!curGrid[curRow - 1][curCol].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol]));
+            else
+                if(curRow - 1 == this.endState.getPosition().getRowIndex() && curCol == this.endState.getPosition().getColumnIndex()){
+                    neighbors.add(new MazeState(curGrid[curRow - 1][curCol]));
+                }
+        }
         // [left + up] slant :
-        if(curRow - 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow - 1 >= 0 && curCol - 1 >= 0)
-            if(!curGrid[curRow -  1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol - 1]));
+        if(curRow - 1 < maze.getRow() && curCol - 1 < maze.getCol() && curRow - 1 >= 0 && curCol - 1 >= 0) {
+            if (!curGrid[curRow - 1][curCol - 1].isWall()) neighbors.add(new MazeState(curGrid[curRow - 1][curCol - 1]));
+            else
+                if(curRow - 1 == this.endState.getPosition().getRowIndex() && curCol - 1 == this.endState.getPosition().getColumnIndex()){
+                    neighbors.add(new MazeState(curGrid[curRow - 1][curCol - 1]));
+                }
+        }
 
         return neighbors;
     }

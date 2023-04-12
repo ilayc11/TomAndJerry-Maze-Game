@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="yes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
@@ -197,7 +196,8 @@
       <workItem from="1680610667219" duration="266000" />
       <workItem from="1680629553366" duration="848000" />
       <workItem from="1680676070240" duration="7672000" />
-      <workItem from="1681119933732" duration="11108000" />
+      <workItem from="1681119933732" duration="12279000" />
+      <workItem from="1681290602738" duration="1084000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -437,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680612381738</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="yes">
+      <created>1681143592904</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681143592904</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
