@@ -44,9 +44,7 @@ public class SearchableMaze implements ISearchable{
         int curCol = curPosition.getColumnIndex();
 
         /**
-        check all 8 possible neighbours stating with the 2 slants that makes
-        the route to E much shorter [right+down] and [left+down] then moving
-        to
+        check all 8 possible neighbours stating (including slants)
          */
 
         // [right + down] slant (if the solution exit is one of current state neighbour then add it as well) :
@@ -113,7 +111,6 @@ public class SearchableMaze implements ISearchable{
                     neighbors.add(new MazeState(curGrid[curRow - 1][curCol - 1]));
                 }
         }
-
         return neighbors;
     }
 

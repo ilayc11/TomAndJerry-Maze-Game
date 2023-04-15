@@ -43,21 +43,20 @@ public class MazeState extends AState implements Serializable {
 
 
     /**
-     *
+     * The method helps to set the cost of some state according
+     * to the possibility of moving straight or in slant.
+     * slant worth 15 point, while straight line worth 10 points.
+     * @param parentState The state of our parent
      */
     @Override
     public void setCost(AState parentState) {
         MazeState parent = (MazeState) parentState;
         if (Math.abs(parent.getPosition().getRowIndex() - this.getPosition().getRowIndex()) == 1
                 && Math.abs(parent.getPosition().getColumnIndex() - this.getPosition().getColumnIndex()) == 1) {
-            //h(state) = abs(state.row - goal.row) + abs(state.col - goal.col)
             this.setCost(parent.getCost() + 15);
-            //
         } else
             this.setCost(parent.getCost() + 20);
     }
-
-
 
     @Override
     public String toString() {

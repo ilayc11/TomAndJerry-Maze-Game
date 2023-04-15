@@ -33,7 +33,6 @@ public class MyMazeGenerator extends AMazeGenerator {
         maze.setGoalPosition(grid[row-1][col-1]);
         Position next,current = maze.getStartPosition();
         stack.push(current);
-        //current.setIsWall(false);
 
         while(!stack.isEmpty()){
             while( (next = getRandomOption(current,grid,row,col)) == null && !stack.isEmpty()){
@@ -46,7 +45,6 @@ public class MyMazeGenerator extends AMazeGenerator {
             current = next;
             stack.push(current);
             if(maze.getGoalPosition() == null && (current.getRowIndex() == row-1 || current.getColumnIndex() == col-1 || current.getColumnIndex() == 0)){
-                //maze.setGoalPosition(current);
             }
         }
         return maze;

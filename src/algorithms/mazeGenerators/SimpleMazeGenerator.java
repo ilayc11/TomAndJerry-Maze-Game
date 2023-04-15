@@ -11,13 +11,14 @@ public class SimpleMazeGenerator extends AMazeGenerator {
     static Random rand = new Random();
     public SimpleMazeGenerator() {}
 
+    /**
+     In this method, we generate simple maze easily by first creating maze
+     full of walls, then each row will be or full of walls or full of paths.
+     Finally, we're randomly creating single path in each row that represents walls row.
+     */
     @Override
     public Maze generate(int row, int col){
-        /**
-        In this method, we generate simple maze easily by first creating maze
-        full of walls, then each row will be or full of walls or full of paths.
-        Finally, we're randomly creating single path in each row that represents walls row.
-         */
+
         if( row < 1 || col < 1){
             return null;
         }
