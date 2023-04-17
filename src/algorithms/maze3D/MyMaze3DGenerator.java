@@ -11,6 +11,9 @@ import java.util.Stack;
 public class MyMaze3DGenerator extends AMaze3DGenerator {
 
     Random rand = new Random();
+    Position3D[][][]grid;
+    int depth,row,col;
+    Position3D current,next;
 
     /**
      * This function use back tracking DFS algorithm to generate a maze. The DFS algorithm get the possible moves it can make
@@ -28,7 +31,10 @@ public class MyMaze3DGenerator extends AMaze3DGenerator {
             return null;
         }
         Maze3D maze = new Maze3D(depth,row,col);
-        Position3D[][][] grid = maze.getGrid();
+        this.depth=depth;
+        this.row=row;
+        this.col=col;
+         grid = maze.getGrid();
 
         if( depth<4||row < 4 || col < 4){
             createDefaultMaze(maze);
@@ -42,13 +48,13 @@ public class MyMaze3DGenerator extends AMaze3DGenerator {
         //current.setIsWall(false);
 
         while(!stack.isEmpty()){
-            while( (next = getRandomOption( current,grid,depth,row,col)) == null && !stack.isEmpty()){
+            while( (next = getRandomOption( )) == null && !stack.isEmpty()){
                 current = stack.pop();
             }
             if( next == null) break;
 
             next.setIsWall(false);
-            createPassage(current,next,grid);
+            createPassage();
             current = next;
             stack.push(current);
             if(maze.getGoalPosition() == null && (current.getDepthIndex()==depth-1|| current.getRowIndex() == row-1 || current.getColumnIndex() == col-1 ||current.getDepthIndex()==0||current.getRowIndex()==0|| current.getColumnIndex() == 0)){
@@ -80,33 +86,27 @@ public class MyMaze3DGenerator extends AMaze3DGenerator {
 
     /**
      * Create a passage between to cells by breaking the wall in the cell between them.
-     * @param cell1 first chosen cell
-     * @param cell2 second chosen cell
-     * @param grid grid that hold all of the cells in the maze.
      */
-    private void createPassage(Position3D cell1, Position3D cell2, Position3D[][][] grid){
-        int x = (cell1.getRowIndex() + cell2.getRowIndex())/2;
-        int y = (cell1.getColumnIndex() + cell2.getColumnIndex())/2;
-        int z = (cell1.getDepthIndex()+cell2.getDepthIndex())/2;
-        grid[cell1.getDepthIndex()][cell1.getRowIndex()][cell1.getColumnIndex()].setIsWall(false);
+    private void createPassage(){
+        int x = (current.getRowIndex() + next.getRowIndex())/2;
+        int y = (current.getColumnIndex() + next.getColumnIndex())/2;
+        int z = (current.getDepthIndex()+next.getDepthIndex())/2;
+        grid[current.getDepthIndex()][current.getRowIndex()][current.getColumnIndex()].setIsWall(false);
         grid[z][x][y].setIsWall(false);
     }
 
     /**
      * This function check all the possible moves forward from a cell. possible moves would be to cells that which are walls and
      * inside the bounds of the maze.
-     * @param cell The current cell to examine possible moves from it.
-     * @param grid The grid of the maze that hold all the cells.
-     * @param row Number of rows in the maze.
-     * @param col number of columns in the maze.
+     *
      * @return if there is one or more possible moves than randomly return one of them, else return null.
      */
 
-    private Position3D getRandomOption( Position3D cell, Position3D[][][] grid, int depth,int row , int col){
+    private Position3D getRandomOption( ){
         ArrayList<Position3D> neighbours = new ArrayList<Position3D>();
-        int col2 = cell.getColumnIndex();
-        int row2 = cell.getRowIndex();
-        int depth2 = cell.getDepthIndex();
+        int col2 = current.getColumnIndex();
+        int row2 = current.getRowIndex();
+        int depth2 =current.getDepthIndex();
 
         if(depth2==depth-2&& row2==row-2&&col2==col-2) {
             grid[depth2+1][row2][col2].setIsWall(false);

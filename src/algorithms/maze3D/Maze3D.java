@@ -1,5 +1,7 @@
 package algorithms.maze3D;
 
+import java.util.ArrayList;
+
 public class Maze3D {
     /**
      * This class represents the Maze itself.
@@ -19,7 +21,7 @@ public class Maze3D {
      */
     public Maze3D(int depthnum,int rowNum,int colNum){
 
-        Grid=new Position3D[depthnum][rowNum][colNum];
+        Grid=new Position3D[depthnum][][];
         for(int i=0;i<depthnum;i++){
             for(int j=0;j<rowNum;j++){
                 for(int k=0;k<colNum;k++)

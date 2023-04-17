@@ -10,12 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches">
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ATP-Project-PartA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ATP-Project-PartA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ATP_Project_PartA_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ATP_Project_PartA_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATP-Project-PartA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ATP-Project-PartA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit/algorithms/search/BestFirstSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit/algorithms/search/BestFirstSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/maze3D/Maze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/maze3D/Maze3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/maze3D/MyMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/maze3D/MyMaze3DGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/AState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/AState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/MazeState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/GeneralCheckingFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/GeneralCheckingFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunMaze3DGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMaze3DGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze3D.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,30 +81,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ilay/Desktop/Advanced Topics/ATP-Project-PartA/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/ilay/Desktop/Advanced Topics/ATP-Project-PartA/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed\mazeGenerators" />
@@ -104,7 +122,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BestFirstSearchTest">
+  <component name="RunManager" selected="Application.RunSearchOnMaze">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ATP-Project-PartA" />
@@ -170,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunSearchOnMaze" />
         <item itemvalue="JUnit.BestFirstSearchTest" />
         <item itemvalue="Application.RunSearchOnMaze3D" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.RunMazeGenerator" />
-        <item itemvalue="Application.RunSearchOnMaze" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +227,7 @@
       <workItem from="1681119933732" duration="12279000" />
       <workItem from="1681290602738" duration="1084000" />
       <workItem from="1681383763787" duration="610000" />
+      <workItem from="1681753787239" duration="1124000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
