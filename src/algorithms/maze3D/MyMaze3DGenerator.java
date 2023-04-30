@@ -42,8 +42,8 @@ public class MyMaze3DGenerator extends AMaze3DGenerator {
         }
         Stack<Position3D> stack = new Stack<Position3D>();
         maze.setStartPosition(grid[0][0][0]);
-        maze.setGoalPosition(grid[depth-1][row-1][col-1]);
-        Position3D next,current = maze.getStartPosition();
+        maze.setGoalPosition(grid[0][row-1][col-1]);
+        current = maze.getStartPosition();
         stack.push(current);
         //current.setIsWall(false);
 
@@ -61,10 +61,10 @@ public class MyMaze3DGenerator extends AMaze3DGenerator {
                // maze.setGoalPosition(current);
             }
         }
-        Position3D tmp=new Position3D(depth-1,row-1,col-2);
+        Position3D tmp=new Position3D(0,row-1,col-2);
         tmp.setIsWall(false);
         maze.setPositionState(tmp);
-        tmp.setPosition(depth-1,row-2,col-2);
+        tmp.setPosition(0,row-2,col-2);
         tmp.setIsWall(false);
         maze.setPositionState(tmp);
         return maze;

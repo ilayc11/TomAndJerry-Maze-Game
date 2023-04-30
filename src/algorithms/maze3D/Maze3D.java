@@ -11,6 +11,7 @@ public class Maze3D {
      * The Maze have starting and ending position.
      */
     private Position3D[][][]Grid;
+    private Position3D[][][]Grid2;
     private  Position3D startPos;
     private  Position3D endPos;
 
@@ -20,15 +21,17 @@ public class Maze3D {
      * @param colNum col num
      */
     public Maze3D(int depthnum,int rowNum,int colNum){
-
-        Grid=new Position3D[depthnum][][];
+        Grid=new Position3D[depthnum][rowNum][colNum];
         for(int i=0;i<depthnum;i++){
             for(int j=0;j<rowNum;j++){
-                for(int k=0;k<colNum;k++)
-                    Grid[i][j][k]=new Position3D(i,j,k);
+                for(int k=0;k<colNum;k++) {
+                    Grid[i][j][k] = new Position3D(i, j, k);
+
+                }
             }
         }
-        this.endPos=new Position3D(depthnum-1,rowNum-1,colNum-1);
+
+        this.endPos=new Position3D(0,rowNum-1,colNum-1);
         this.startPos=new Position3D(0,0,0);
         this.endPos.setIsWall(false);
         this.startPos.setIsWall(false);
