@@ -17,7 +17,7 @@ public class Client implements Serializable {
 
     public void communicateWithServer(){
         try {
-            Socket ServertSocket = new Socket("127.0.0.1", this.serverPort);
+            Socket ServertSocket = new Socket(this.serverIP, this.serverPort);
             System.out.println("Client is connected to server !");
             this.clientStrategy.clientStrategy(ServertSocket.getInputStream(), ServertSocket.getOutputStream());
             ServertSocket.close();
