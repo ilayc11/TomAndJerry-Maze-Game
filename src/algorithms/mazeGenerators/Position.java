@@ -1,6 +1,8 @@
 package algorithms.mazeGenerators;
 
-public class Position {
+import java.io.Serializable;
+
+public class Position implements Serializable {
     /**
      * This class represents position in the Maze.
      * Each position has its row number and column number (indexes).

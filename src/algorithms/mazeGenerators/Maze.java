@@ -1,6 +1,8 @@
 package algorithms.mazeGenerators;
 
-public class Maze {
+import java.io.Serializable;
+
+public class Maze implements Serializable {
     /**
      * This class represents the Maze itself.
      * The Maze build of 2D array of positions. Each

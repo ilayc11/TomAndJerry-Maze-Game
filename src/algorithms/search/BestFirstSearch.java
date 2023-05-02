@@ -38,30 +38,6 @@ public class BestFirstSearch extends ASearchingAlgorithm{
                     curNeighbor.setParentState(curState);
                     openList.add(curNeighbor);
                 }
-
-                /*
-                else{ // check if new path is better than the previous.
-                    boolean fromQueueFlag = false;
-                    AState visitedState = getFromList(curNeighbor);
-
-                    if( visitedState == null) {
-                        visitedState = getFromQueue(curNeighbor);
-                        fromQueueFlag = true;
-                    }
-                    assert visitedState != null;
-                    int oldCost = visitedState.getCost();
-                    visitedState.setCost(curState);
-
-                    if(oldCost < visitedState.getCost())
-                        visitedState.setCost(oldCost);
-                    else visitedState.setParentState(curState);
-                    if(fromQueueFlag){
-                        openList.add(visitedState);
-                        continue;
-                    }
-                    closeList.add(visitedState);
-                }*/
-
                 if (curNeighbor.equals(goal)) {
                     Solution sol = new Solution();
                     while (curNeighbor != null){
