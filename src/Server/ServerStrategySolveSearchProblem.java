@@ -43,16 +43,16 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy, Serial
                 SaveSolutionToFile(MazeSolutionForClient, clientMaze);
                 oos.writeObject(MazeSolutionForClient);
 
-                out.close();
                 oos.flush();
                 oos.close();
+                out.close();
                 return;
             }
 
             oos.writeObject(MazeSolutionForClient);
-            out.close();
             oos.flush();
             oos.close();
+            out.close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

@@ -9,20 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches">
-      <change afterPath="$PROJECT_DIR$/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/IClientStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/Configurations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/IServerStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/RunCommunicateWithServers.java" afterDir="false" />
+    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Worked on Server, need to make few changes later on">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +200,8 @@
       <workItem from="1680676070240" duration="7672000" />
       <workItem from="1681119933732" duration="12279000" />
       <workItem from="1681290602738" duration="1084000" />
-      <workItem from="1682942486175" duration="38229000" />
+      <workItem from="1682942486175" duration="42060000" />
+      <workItem from="1683477579170" duration="5545000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -479,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681305205541</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Worked on Server, need to make few changes later on">
+      <created>1683046207106</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1683046207106</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Worked on Server, need to make few changes later on">
+      <created>1683046245634</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1683046245634</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +503,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yes" />
     <MESSAGE value="Finishing touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing touches" />
+    <MESSAGE value="Worked on Server, need to make few changes later on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on Server, need to make few changes later on" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
