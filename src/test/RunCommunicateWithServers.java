@@ -50,8 +50,7 @@ public class RunCommunicateWithServers implements Serializable {
 
                                 InputStream is = new MyDecompressorInputStream(new ByteArrayInputStream(compressedMaze));
 
-                                byte[] decompressedMaze = new byte[2524 /*CHANGE
-SIZE ACCORDING TO YOU MAZE SIZE*/]; //allocating byte[] for the decompressed maze -
+                                byte[] decompressedMaze = new byte[2524 /*CHANGE SIZE ACCORDING TO YOU MAZE SIZE*/]; //allocating byte[] for the decompressed maze -
 
 
                                 is.read(decompressedMaze); //Fill decompressedMaze 25 | P a g e  with bytes

@@ -1,28 +1,29 @@
 package Client;
-import java.io.*;
+
+import java.io.IOException;
 import java.net.InetAddress;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Client implements Serializable {
+public class Client {
     private InetAddress serverIP;
     private int serverPort;
-    private IClientStrategy clientStrategy;
+    private IClientStrategy strategy;
 
-    public Client(InetAddress _IP, int _port, IClientStrategy _clientStrategy){
-        this.serverIP = _IP;
-        this.serverPort = _port;
-        this.clientStrategy = _clientStrategy;
+    public Client(InetAddress serverIP, int serverPort, IClientStrategy strategy) {
+        this.serverIP = serverIP;
+        this.serverPort = serverPort;
+        this.strategy = strategy;
     }
 
     public void communicateWithServer(){
         try {
-            Socket ServertSocket = new Socket(this.serverIP, this.serverPort);
-            System.out.println("Client is connected to server !");
-            this.clientStrategy.clientStrategy(ServertSocket.getInputStream(), ServertSocket.getOutputStream());
-            ServertSocket.close();
-        }catch (IOException e){
+            Socket serverSocket = new Socket("127.0.0.1", serverPort);
+            strategy.clientStrategy(serverSocket.getInputStream(), serverSocket.getOutputStream());
+            serverSocket.close();
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }

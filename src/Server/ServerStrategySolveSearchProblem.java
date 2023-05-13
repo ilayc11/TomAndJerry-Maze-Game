@@ -1,157 +1,122 @@
 package Server;
 
-import java.io.*;
 import algorithms.mazeGenerators.*;
 import algorithms.search.*;
-import Server.Configurations;
-import java.nio.file.FileSystems;
+
+import java.io.*;
+import java.nio.channels.Channels;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.concurrent.atomic.AtomicInteger;
 
+public class ServerStrategySolveSearchProblem implements IServerStrategy {
 
-public class ServerStrategySolveSearchProblem implements IServerStrategy, Serializable{
-    /*
-    numberOfSolution for safe implementation of counter
-     using AtomicInteger in thread based environment :
-     */
-    private AtomicInteger numberOfSolutions;
+    private static AtomicInteger numOfSolution ;
 
-    public ServerStrategySolveSearchProblem(){
-        this.numberOfSolutions = new AtomicInteger(0);
-    }
     /**
-     * The strategy gets from the clients Maze, solves it and finally returns to the
-     * client Solve object with the maze solution
-     * @param inputStream input stream that the server got from the socket connection
-     * @param outputStream output stream that the server got from the socket connection
+     * This function apply the server strategy to solve a given maze. First it checks if the maze already been solved
+     * earlier if it does then it will send back to the client the existing solution throw the socket.Else
+     * it will try to solve it, write the solution to a file to hold it and then send it back to client.
+     * @param inFromClient Client input stream the server got from the socket connection.
+     * @param outToClient Client output  stream the server got from the socket connection.
      */
     @Override
-    public void ServerStrategyHendler(InputStream inputStream, OutputStream outputStream) {
+    public void applyStrategy(InputStream inFromClient, OutputStream outToClient) {
+        InputStream interruptibleInputStream = Channels.newInputStream(Channels.newChannel(inFromClient));
         try {
-            ObjectInputStream out = new ObjectInputStream(inputStream);
-            ObjectOutputStream oos = new ObjectOutputStream(outputStream);
+            ObjectInputStream fromClient = new ObjectInputStream(interruptibleInputStream);
+            ObjectOutputStream toClient = new ObjectOutputStream(outToClient);
+            ISearchingAlgorithm SearchAlgorithm = Configurations.getInstance().getSearchAlgorithm();
 
-            Maze clientMaze = (Maze) out.readObject();
-            Solution MazeSolutionForClient = findAvailableSolutionForMaze(clientMaze);
-            /*
-            if the solution is null, then client's Maze is not on the disk
-             */
-            if(MazeSolutionForClient == null){
-                ISearchingAlgorithm searchAlgo = Configurations.getInstance().getSearchingAlgorithm();
-                MazeSolutionForClient = searchAlgo.solve((ISearchable) clientMaze);
-                SaveSolutionToFile(MazeSolutionForClient, clientMaze);
-                oos.writeObject(MazeSolutionForClient);
+            Maze maze = (Maze)fromClient.readObject();
+            Solution sol = findIfSolutionExist(maze);
+            if(sol == null){
 
-                oos.flush();
-                oos.close();
-                out.close();
-                return;
+                SearchableMaze searchableMaze = new SearchableMaze(maze);
+                sol = SearchAlgorithm.solve(searchableMaze);
+                writeMazeSolutionToFile(maze,sol);
             }
 
-            oos.writeObject(MazeSolutionForClient);
-            oos.flush();
-            oos.close();
-            out.close();
+            toClient.writeObject(sol);
+            toClient.flush();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
     /**
-     * The next method helps the Server to find available solution to clients Maze
-     * object, the method search that Maze in the disk, if the maze found, it retrieves
-     * his solution, if not found, return null.
-     * @param maze clients Maze.
-     * @return Solution object that represents the solution to the maze or null if the
-     * Maze is not on the disk.
+     * This function search for a solution if there is one in the temp directory that hold the already solved maze object files.
+     * @param maze maze to check if it been already solved.
+     * @return return the existing solution to the maze if there is one or else null.
      */
-    private Solution findAvailableSolutionForMaze(Maze maze){
-        if(maze == null)
-            return null;
-        Maze wantedMaze;
+    private Solution findIfSolutionExist(Maze maze) {
         String tmpdir = System.getProperty("java.io.tmpdir");
-        File f = new File(tmpdir);
-        File[] lsOfTempFiles = f.listFiles();
+        File folder = new File(tmpdir);
+        File[] listOfTempFiles = folder.listFiles();
 
-        for(int i = 0; i < lsOfTempFiles.length; i++){
-            try{
-                FileInputStream fis = new FileInputStream(lsOfTempFiles[i]);
+        Maze existMaze;
+        for (int i = 0; i < listOfTempFiles.length; i++) {
+            try {
+                FileInputStream fis = new FileInputStream(listOfTempFiles[i]);
                 ObjectInputStream ois = new ObjectInputStream(fis);
-                wantedMaze = (Maze) ois.readObject();
-                if(maze.equals(wantedMaze)){
-                    /*
-                    get the solution for the maze from the file and return it :
-                     */
-                    String solutionNumber = lsOfTempFiles[i].toString().substring(0,1);
-                    FileInputStream SolFile = new FileInputStream(solutionNumber);
-                    ObjectInputStream ois2 = new ObjectInputStream(SolFile);
-                    Solution solution = (Solution) ois2.readObject();
-                    return solution;
+                existMaze = (Maze) ois.readObject();
+
+                if (maze.equals(existMaze)) {
+
+                    String fileName = listOfTempFiles[i].getName().substring(0,1) + "Solution.txt";
+                    FileInputStream SolutionFile = new FileInputStream(fileName);
+                    ObjectInputStream oiss = new ObjectInputStream(SolutionFile);
+
+                    return (Solution) oiss.readObject();
                 }
-            }catch (IOException e){
-                e.printStackTrace();
+
+            } catch (FileNotFoundException e) {
+                continue;
+            } catch (IOException e) {
+                continue;
             } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
         }
         return null;
     }
 
     /**
-     * The method helps the server to save the Maze object and it's Solution
-     * object on the disk for faster performance in retrieving answer to the client.
-     * The method saves the maze and his solution in seperated files
-     * @param solution Solution object that represents solution to maze
-     * @param maze Maze object from the client
+     * This function create a new files, temp file for the maze and regular file for the solution ( as requested for the project).
+     * @param maze The maze we want to write to a file.
+     * @param sol The solution we want to write to a file.
      */
-    public void SaveSolutionToFile(Solution solution, Maze maze){
-        int solNum = this.numberOfSolutions.incrementAndGet();
-        // creates string that represents the current solution in the file :
-        String solName = String.format("%dSolution.txt", solNum);
-        String mazeName = String.format("%dMaze",solNum);
+    private void writeMazeSolutionToFile(Maze maze, Solution sol ){
+        if(numOfSolution == null) numOfSolution = new AtomicInteger();
+        int numSol = numOfSolution.incrementAndGet();
+        String name = String.format("%dSolution.txt", numSol);
         try {
-            /*
-            tries to write the Solution for the maze to the file,
-            so it can be used later by the server to find the correct
-            solution to that exact maze if possible :
-             */
-            FileOutputStream out = new FileOutputStream(solName);
-            ObjectOutputStream oos = new ObjectOutputStream(out);
-            oos.writeObject(solution);
-
-            oos.flush();
+            FileOutputStream fos = new FileOutputStream(name);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(sol);
             oos.close();
-            out.close();
-        }catch (IOException e){
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            /*
-            tries to write the Maze object to the file
-            (other file) so it can be used later by the server
-            to determine if there are exact Maze object as
-            the clients request for faster respond and solution :
-             */
-            Path temp = Files.createTempFile(mazeName, ".tmp");
-            /*
-            in case the file already exist at the path, delete it :
-             */
-            temp.toFile().deleteOnExit();
 
-            FileOutputStream out = new FileOutputStream(String.valueOf(temp));
-            ObjectOutputStream oos = new ObjectOutputStream(out);
+        try {
+            Path tempFile = Files.createTempFile(String.format("%dMaze",numSol), ".tmp");
+            tempFile.toFile().deleteOnExit();
+            FileOutputStream fos = new FileOutputStream(String.valueOf(tempFile));
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(maze);
-
-            oos.flush();
             oos.close();
-            out.close();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
     }
 }
-
-

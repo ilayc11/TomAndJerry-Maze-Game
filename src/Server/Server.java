@@ -1,107 +1,93 @@
 package Server;
 
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.io.*;
 
-public class Server implements Runnable, Serializable {
-    private int port; // the port number
-    private int WaitingIntervalsMS;
-    private int numOfClients;
+public class Server implements Runnable {
+    private int port;
+    private int listeningIntervalMS;
     private volatile boolean stop;
-    private IServerStrategy serverStrategy;
+    private IServerStrategy strategy;
     private ExecutorService threadPool;
-    private Thread serverThread;
+    private Thread ServerThread;
 
-    public Server(int _port,int _WaitingIntervalsMS, IServerStrategy _serverStrategy){
-        this.port = _port;
-        this.WaitingIntervalsMS = _WaitingIntervalsMS;
-        this.serverStrategy = _serverStrategy;
-        this.numOfClients = 0;
-        // using instance of Configuration object to extract number of pool threads :
-        this.threadPool = Executors.newFixedThreadPool(Configurations.getInstance().getNumberOfThreads());
-        this.serverThread = new Thread(this);
+
+    public Server(int port, int listeningIntervalMS, IServerStrategy strategy) {
+        this.port = port;
         this.stop = false;
+        this.listeningIntervalMS = listeningIntervalMS;
+        this.strategy = strategy;
+        this.threadPool = Executors.newFixedThreadPool(Configurations.getInstance().getNumberOfThreads());
+        this.ServerThread = new Thread(this);
     }
 
     /**
-     * the method responsible to start the server
-     * by running serverThread from threads pool
+     * This function responsible to start the server by running separate thread
      */
     public void start(){
-        if(!serverThread.isAlive())
-            serverThread.start();
+        if(!ServerThread.isAlive()) ServerThread.start();
     }
     public void stop(){
-        synchronized ((Object)this.stop){
-            this.stop = true;
+        synchronized ((Object)stop){
+            stop = true;
         }
     }
 
+    /**
+     * This function responsible to run the server by waiting for clients to connect to the serverSocket and then send
+     * him to the thread pool where he will be hanlded by the suitable strategy.
+     *
+     */
     @Override
-    public void run() {
-        try{
-            ServerSocket serverSocket = new ServerSocket(this.port);
-            serverSocket.setSoTimeout(this.WaitingIntervalsMS);
-            while (true){
-                synchronized ((Object) stop){
-                    if(stop)
-                        break;
+    public void run()  {
+        try {
+            ServerSocket serverSocket = new ServerSocket(port);
+            serverSocket.setSoTimeout(listeningIntervalMS);
+            while (true) {
+                synchronized ((Object)stop){
+                    if(stop) break;
                 }
                 try {
-                    System.out.println("Server is running !");
-                    Socket client = serverSocket.accept();
-                    System.out.println("Binding with the client executed successfully !");
-                    numOfClients++;
-                    //this.serverThread = new ServerThread(client, numOfClients, this);
-                    this.threadPool.execute(new Strategy(client, numOfClients, this));
-                }catch (IOException e){
-                    e.printStackTrace();
+                    System.out.println("Server is running..");
+                    Socket clientSocket = serverSocket.accept();
+                    System.out.println("Server connected to client.");
+                    // Insert the new task into the thread pool:
+                    threadPool.execute(new RunStrategy(clientSocket));
+
+                } catch (IOException e) {
+                    System.out.println("Server waiting for client...");
                 }
             }
             serverSocket.close();
-            this.threadPool.shutdown();
-            System.out.println("Server is closed");
+            threadPool.shutdown();
+            System.out.println("Server is closed, Bye Bye");
 
-        }catch (IOException e){
-            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 
     /**
-     * private class that uses the thread from thread pool to
-     * execute server strategy and handle it
+     * Private class that execute the server strategy by the threads in the thread pool.
      */
-    private class Strategy implements Runnable{
-        private Server server;
-        private Socket client;
-        private int counterClient;
-
-        Strategy(Socket _client, int _numOfClientsCounter, Server _server ) throws IOException {
-            this.server = _server;
-            this.client = _client;
-            this.counterClient = _numOfClientsCounter;
-            System.out.println("Connection " + this.counterClient + " established with client : " + this.client + " by server : " + this.server);
+    private class RunStrategy implements Runnable{
+        Socket clientSocket;
+        public RunStrategy(Socket clientSocket) {
+            this.clientSocket = clientSocket;
         }
 
-        /**
-         * The run() method above is synchronized to make sure server is
-         * handling only one client at a time
-         */
         @Override
-        public synchronized void run() {
+        public void run() {
             try {
-                System.out.println("Server starts handle client number -> (" + this.counterClient + ")" );
-                serverStrategy.ServerStrategyHendler(this.client.getInputStream(), this.client.getOutputStream());
-                this.client.close();
-            }catch (IOException e){
+                strategy.applyStrategy(clientSocket.getInputStream(), clientSocket.getOutputStream());
+                clientSocket.close();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
 }

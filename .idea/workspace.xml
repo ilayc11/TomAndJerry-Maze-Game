@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ATP-Project-PartA:jar" />
+      <artifact name="ATPProjectJAR:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Worked on Server, need to make few changes later on">
+    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ATP-Project-PartA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ATP-Project-PartA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/IClientStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/IClientStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Configurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Configurations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/IServerStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/IServerStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategyGenerateMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunCommunicateWithServers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunCommunicateWithServers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -59,30 +70,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ilay/Desktop/Advanced Topics/ATP-Project-PartA/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/ilay/Desktop/Advanced Topics/ATP-Project-PartA/out/artifacts/ATPProjectJAR_jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed\mazeGenerators" />
@@ -101,13 +112,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.RunCommunicateWithServers">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ATP-Project-PartA" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RunCommunicateWithServers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.RunCommunicateWithServers" />
       <module name="ATP-Project-PartA" />
@@ -134,8 +138,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunMaze3DGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RunMaze3DGenerator" />
+    <configuration name="RunSearchOnMaze" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="test.RunSearchOnMaze" />
       <module name="ATP-Project-PartA" />
       <extension name="coverage">
         <pattern>
@@ -160,13 +166,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BestFirstSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ATP-Project-PartA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithms.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="algorithms.search" />
+      <option name="MAIN_CLASS_NAME" value="algorithms.search.BestFirstSearchTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunCommunicateWithServers" />
         <item itemvalue="Application.RunCompressDecompressMaze" />
+        <item itemvalue="Application.RunSearchOnMaze" />
+        <item itemvalue="JUnit.BestFirstSearchTest" />
         <item itemvalue="Application.RunSearchOnMaze3D" />
-        <item itemvalue="Application.RunMaze3DGenerator" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -200,8 +221,15 @@
       <workItem from="1680676070240" duration="7672000" />
       <workItem from="1681119933732" duration="12279000" />
       <workItem from="1681290602738" duration="1084000" />
-      <workItem from="1682942486175" duration="42060000" />
-      <workItem from="1683477579170" duration="5545000" />
+      <workItem from="1681383763787" duration="610000" />
+      <workItem from="1681753787239" duration="1165000" />
+      <workItem from="1681754999809" duration="186000" />
+      <workItem from="1681810249854" duration="127000" />
+      <workItem from="1682425498965" duration="346000" />
+      <workItem from="1682425861356" duration="1015000" />
+      <workItem from="1682874214526" duration="3607000" />
+      <workItem from="1683809126601" duration="1662000" />
+      <workItem from="1683979688950" duration="1373000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -469,21 +497,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681305205541</updated>
     </task>
-    <task id="LOCAL-00039" summary="Worked on Server, need to make few changes later on">
-      <created>1683046207106</created>
+    <task id="LOCAL-00039" summary="Finishing touches">
+      <created>1681754954957</created>
       <option name="number" value="00039" />
       <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1683046207106</updated>
+      <updated>1681754954957</updated>
     </task>
-    <task id="LOCAL-00040" summary="Worked on Server, need to make few changes later on">
-      <created>1683046245634</created>
+    <task id="LOCAL-00040" summary="Finishing touches">
+      <created>1682874520952</created>
       <option name="number" value="00040" />
       <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1683046245634</updated>
+      <updated>1682874520953</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Finishing touches">
+      <created>1682877172896</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1682877172896</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,42 +538,37 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yes" />
     <MESSAGE value="Finishing touches" />
-    <MESSAGE value="Worked on Server, need to make few changes later on" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on Server, need to make few changes later on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing touches" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/RunMaze3DGenerator.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/RunSearchOnMaze.java</url>
           <line>24</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/RunMaze3DGenerator.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="47" />
+          <url>file://$PROJECT_DIR$/src/test/RunCompressDecompressMaze.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/algorithms/maze3D/Maze3D.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/src/test/RunCompressDecompressMaze.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/RunCommunicateWithServers.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="49" />
+          <line>55</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.net.SocketTimeoutException" package="java.net" />
-          <option name="timeStamp" value="50" />
-        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ATP_Project_PartA$RunMaze3DGenerator.ic" NAME="RunMaze3DGenerator Coverage Results" MODIFIED="1681800421508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>test.*</FILTER>
-    </SUITE>
   </component>
 </project>
