@@ -22,11 +22,11 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
      */
     @Override
     public void applyStrategy(InputStream inFromClient, OutputStream outToClient) {
+        ISearchingAlgorithm SearchAlgorithm = Configurations.getInstance().getSearchAlgorithm();
         InputStream interruptibleInputStream = Channels.newInputStream(Channels.newChannel(inFromClient));
         try {
             ObjectInputStream fromClient = new ObjectInputStream(interruptibleInputStream);
             ObjectOutputStream toClient = new ObjectOutputStream(outToClient);
-            ISearchingAlgorithm SearchAlgorithm = Configurations.getInstance().getSearchAlgorithm();
 
             Maze maze = (Maze)fromClient.readObject();
             Solution sol = findIfSolutionExist(maze);
@@ -41,9 +41,7 @@ public class ServerStrategySolveSearchProblem implements IServerStrategy {
             toClient.flush();
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

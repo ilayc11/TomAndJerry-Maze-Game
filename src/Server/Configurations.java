@@ -17,7 +17,7 @@ public class Configurations {
     private  String searchAlgorithm;
     private  String numberOfThreads;
     private  String generatorAlgorithm;
-    private  Properties prop;
+    private  Properties props;
 
     /**
      *  This configuration class initially will load the config file data to it fields and then will set
@@ -25,8 +25,8 @@ public class Configurations {
      */
     private Configurations(){
         try {
-            InputStream file = new FileInputStream(new File("resources/config.properties"));
-            Properties props = new Properties();
+            InputStream file = new FileInputStream("resources/config.properties");
+            props = new Properties();
             props.load(file);
             searchAlgorithm = props.getProperty("mazeSearchingAlgorithm");
             numberOfThreads = props.getProperty("threadPoolSize");
@@ -65,27 +65,4 @@ public class Configurations {
         else return new EmptyMazeGenerator();
     }
 
-    public void setSearchAlgorithm(String searchName){
-        if( searchName != null) {
-            prop.setProperty("mazeSearchingAlgorithm", searchName);
-            searchAlgorithm = searchName;
-        }
-    }
-
-    public void setNumberOfThreads( int num){
-        if( num >= 0){
-            String numStr = Integer.toString(num);
-            prop.setProperty("threadPoolSize", numStr);
-            numberOfThreads = numStr;
-        }
-    }
-
-    public void setGeneratorAlgorithm(String genName){
-
-        if(genName != null){
-            prop.setProperty("mazeGeneratingAlgorithm",genName);
-            generatorAlgorithm = genName;
-        }
-
-    }
 }
