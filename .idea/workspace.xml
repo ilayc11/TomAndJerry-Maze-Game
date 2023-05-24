@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/Configurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Configurations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ServerStrategySolveSearchProblem.java" afterDir="false" />
-    </list>
+    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,6 +82,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ilay\Desktop\New folder\ATP-Project-PartB\src\algorithms\search" />
       <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed\mazeGenerators" />
       <recent name="C:\Users\ilay\Desktop\Advanced Topics\untitled\src\Fixed" />
     </key>
@@ -226,7 +220,7 @@
       <workItem from="1684422898716" duration="1559000" />
       <workItem from="1684596117960" duration="716000" />
       <workItem from="1684596998817" duration="1296000" />
-      <workItem from="1684849066236" duration="3841000" />
+      <workItem from="1684849066236" duration="3863000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
@@ -515,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682877172896</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Finishing touches">
+      <created>1684852979214</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1684852979214</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
