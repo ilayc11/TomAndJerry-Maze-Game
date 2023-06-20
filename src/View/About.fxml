@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane  style="-fx-background-image: url('Images/jerrywaiting.jpg');-fx-background-size: cover;" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label text="About" textFill="#3316a4" underline="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Credit:" textFill="#5645ac" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fill="#FFFFFF"  strokeType="OUTSIDE" strokeWidth="0.0" text="-Our Maze Game For ATP.&#10;-By Ilay Cohen And Victor Gavrilenko." />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Algorithm to bulid maze:" textFill="#5645ac" underline="true">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Text fill="#FFFFFF" strokeType="OUTSIDE" strokeWidth="0.0" text="We use back-tracking DFS algorithm to bulid the maze.&#10;in brief story the algorithm travel randomly around the points in the maze &#10;and breaking walls between them.&#10; when get stuck it use back-tracking to find the last point with unvisited neigbhor,&#10;until there is no unvisited point in the maze.&#10;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Algorithm to solve maze:" textFill="#5645ac" underline="true">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fill="#FFFFFF" strokeType="OUTSIDE" strokeWidth="0.0" text="The best first search uses the concept of a priority queue and heuristic search. &#10;It is a search algorithm that works on a specific rule.&#10; The aim is to reach the goal from the initial state via the shortest path" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

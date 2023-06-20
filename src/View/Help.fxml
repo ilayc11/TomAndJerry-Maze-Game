@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" style="-fx-background-image: url('Images/jerrywaiting.jpg');-fx-background-size: cover;"
+            xmlns="http://javafx.com/javafx/18.0.1">
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="Game Rules" textFill="#3316a4" underline="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Text fill="#FFFFFF" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello dear mouse lover!,&#10;We need you to help Tom to find the cheese!&#10;" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Game Moves:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Up - Press 8" GridPane.rowIndex="1" />
+                        <Label text="/&gt; - Press 9" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Down - Press 2" GridPane.rowIndex="2" />
+                        <Label text="&lt;/ - Press 1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Left - Press 4" GridPane.rowIndex="3" />
+                        <Label text="&lt;\ - Press 7" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Right - Press 6" GridPane.rowIndex="4" />
+                        <Label text="\\&gt; - Press 3" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Regualr" underline="true" />
+                        <Label text="Diagonal" underline="true" GridPane.columnIndex="1" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Target:" textFill="#5645ac">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fill="#FFFFFF" strokeType="OUTSIDE" strokeWidth="0.0" text="Your purpose is to solve the maze and help the space ship to find the chicken LORD. &#10;Make as few steps as possible to get maximum Points.   " />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Hint:" underline="true">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="if you get stuck you can always see the solution by clicking on solve maze,&#10;but you will get 0 points :(">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
