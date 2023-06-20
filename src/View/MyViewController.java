@@ -125,7 +125,7 @@ public class MyViewController implements Observer, Initializable {
         audio.stop(0);
         audio.playInLoop(1); // starts play game song
         mediaPlayer.dispose();
-
+        //
 
         int rows = Integer.parseInt(textField_mazeRows.getText());
         int cols = Integer.parseInt(textField_mazeColumns.getText());
