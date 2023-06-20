@@ -1,12 +1,2 @@
-20:27:39.171  ******************************************************************************
-20:27:39.174  Some information about the maze before the user start to play :
-20:27:39.174  The algorithm the system choose to create the maze is --> MyMazeGenerator
-20:27:39.174  The algorithm the system choose to solve the maze itself is --> BestFirstSearch
-20:27:47.968  Saved name the user choose -->  MyFirstSave
-20:28:00.037  Information about users game execution : 
-20:28:00.037  User's total points in the current game -->  90
-20:28:00.037  User's medal type -->  Gold medal
-20:28:02.053  ******************************************************************************
-20:28:02.054  Some information about the maze before the user start to play :
-20:28:02.054  The algorithm the system choose to create the maze is --> MyMazeGenerator
-20:28:02.054  The algorithm the system choose to solve the maze itself is --> BestFirstSearch
+17:55:07.384  Information about the generator server -->  Server.Server
+17:55:07.388  Information about the solve server -->  Server.Server@381d6e5f
