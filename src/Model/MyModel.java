@@ -2,9 +2,12 @@ package Model;
 
 import IO.MyDecompressorInputStream;
 import Server.*;
+import View.MyViewController;
 import algorithms.mazeGenerators.Maze;
 import algorithms.mazeGenerators.Position;
 import algorithms.search.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.Socket;
@@ -13,6 +16,7 @@ import java.util.Observable;
 
 public class MyModel extends Observable implements IModel{
 
+    public static final Logger logger = LogManager.getLogger(MyModel.class);
     private int rowLocation;
     private int colLocation;
     private final Server genServer;
@@ -30,6 +34,10 @@ public class MyModel extends Observable implements IModel{
         solServer = new Server(5401,5000,solver);
         genServer.start();
         solServer.start();
+
+        logger.info("Information about the generator server -->  " + genServer);
+        logger.info("Information about the solve server -->  " + solServer);
+
 
     }
 

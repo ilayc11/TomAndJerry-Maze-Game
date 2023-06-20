@@ -101,9 +101,6 @@ public class MyViewController implements Observer, Initializable {
         mediaPlayer.play();
         DancingJerryWithBird.setMediaPlayer(this.mediaPlayer);
 
-
-
-
         // initialize exit button
         setMenuButton();
         setBackground();
