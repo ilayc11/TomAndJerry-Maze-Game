@@ -1,2 +1,2 @@
-# ATP-Project-PartB
-Building maze game from scratch :) 
+# Maze Game project
+Building maze game from scratch
