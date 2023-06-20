@@ -14,4 +14,12 @@ The GUI in this project was build with JavaFX as a MVVM (Model-view-viewmodel) a
 The model use "splash screen" to create a loader before the game starts to give the user sense of knowlegde about what the game is going to be and some information about the game creator while the game loads to the screen.
 Model is dealing with the business logic, the view layer with all the visual design GUI and the ViewModel is the connection part between them. This part of the project was more for our enrichment.
 
+### Game
+The game starts with splash screen that shows the loading process of the game.
+The screen gives to the user first sense about what the game is going to be. Moreover, the screen shows some information about the game creators :
+
+![PreLoader jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/da1e8928-a6a4-4e3d-b577-da8063f09032)
+
+
+
 
