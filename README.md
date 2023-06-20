@@ -20,6 +20,25 @@ The screen gives to the user first sense about what the game is going to be. Mor
 
 ![PreLoader jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/da1e8928-a6a4-4e3d-b577-da8063f09032)
 
+When the loader finished, the home screen of the game is shown to the user with some videos of Tom and Jerry, menu to start the game and some helping bar menu on the top part of the screen :
+
+![HomeScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/ca0d388c-1f79-428f-8666-b6814618f55f)
+
+When the user decide to start a game, after choosing the maze size or just using the defult size, the game starts :
+
+![GameScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/bc5e34bc-dda7-435f-9969-eb44019dfd68)
+
+In case the user succeded to reach to the right end corner (where the cheese is at), the win screen shows to the user. The screen includes some information about the maze, users total score etc :
+
+![WinScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/2f9cd2ad-ddea-423e-8299-2da30553a387)
+
+In case the user wants to read some additional information about the game, he can always choose the "about" button :
+
+![AboutScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/add672aa-74a2-43ec-8d6b-c34a5d77e212)
+
+We hope you will have a greate time solving some mazes to help Jerry get his cheese ! :D
+
+
 
 
 
