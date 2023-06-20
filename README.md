@@ -1,4 +1,4 @@
 # Tom and Jerry maze game 
 
-![Tom_and_Jerry](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/b3a73d50-19ca-4a64-b59a-5edf0765576a)
+![tom-and-jerry-tom-and-jerry-wallpaper-preview](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/cce55ce8-2597-4f48-8d42-afa739a4bcb9)
 
