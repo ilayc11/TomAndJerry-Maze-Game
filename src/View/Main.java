@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
 
 public class Main extends Application {
-    private static final int COUNT_LIMIT = 18000;
+    private static final int COUNT_LIMIT = 90000;
     public static final Logger logger = LogManager.getLogger(Main.class);
 
 
