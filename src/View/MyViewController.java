@@ -167,6 +167,7 @@ public class MyViewController implements Observer, Initializable {
         Label menuLabelAbout = new Label("About");
         menuLabelAbout.setStyle("-fx-text-fill: black;");
 
+
         menuLabelAbout.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
