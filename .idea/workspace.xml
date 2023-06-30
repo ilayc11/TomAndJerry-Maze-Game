@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="Finishing touches" />
+    <list default="true" id="53b7c649-c41c-417c-89e3-83a1bd028b84" name="Changes" comment="Change">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,6 +171,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.RunCommunicateWithServers" />
+      <item itemvalue="Application.RunCompressDecompressMaze" />
+      <item itemvalue="Application.RunMazeGenerator" />
+      <item itemvalue="Application.RunSearchOnMaze" />
+      <item itemvalue="JUnit.BestFirstSearchTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RunMazeGenerator" />
@@ -181,7 +191,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2720c4b4-cd3b-499c-890c-add05c26d7be" name="Changes" comment="" />
+      <changelist id="53b7c649-c41c-417c-89e3-83a1bd028b84" name="Changes" comment="Change" />
       <created>1679744369157</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -221,6 +231,7 @@
       <workItem from="1684596117960" duration="716000" />
       <workItem from="1684596998817" duration="1296000" />
       <workItem from="1684849066236" duration="3863000" />
+      <workItem from="1688040098117" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="yes">
       <created>1679744522545</created>
