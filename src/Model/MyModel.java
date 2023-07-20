@@ -234,6 +234,8 @@ public class MyModel extends Observable implements IModel{
             maze = new Maze(decompressedMaze);
             setChanged();
             notifyObservers("Maze generated");
+            logger.info("Maze has been generated -->  Row: "+row+" Col: " + col);
+
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -267,6 +269,7 @@ public class MyModel extends Observable implements IModel{
                 }
                 setChanged();
                 notifyObservers("Maze solved");
+                logger.info("Maze has been solved" );
             }
         }
     }

@@ -130,8 +130,8 @@ public class MyViewController implements Observer, Initializable {
         {
             showAlertWarning("Minimum size of rows,columns is 4! choose bigger maze.","WARNING");
         }
-        else if(rows > 40 || cols > 40){
-            showAlertWarning("Maximum size of rows,columns is 100! choose smaller maze.","WARNING");
+        else if(rows > 50 || cols > 50){
+            showAlertWarning("Maximum size of rows,columns is 50! choose smaller maze.","WARNING");
         }
         else{
             if(solveBtn.isDisable())

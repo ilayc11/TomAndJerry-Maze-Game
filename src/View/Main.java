@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
 
 public class Main extends Application {
-    private static final int COUNT_LIMIT = 90000;
+    private static final int COUNT_LIMIT = 120000;
     public static final Logger logger = LogManager.getLogger(Main.class);
 
 
@@ -33,14 +33,7 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(event -> myView.endGame());
         primaryStage.getIcons().add(new Image("Images/cheese.png"));
         primaryStage.show();
-        /*
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Message");
-        alert.setHeaderText("Welcome!");
-        alert.setContentText("Welcome to Tom's Maze!\nChoose your maze size and complete it as fast as possible!");
-        alert.show();
 
-         */
     }
 
     @Override
