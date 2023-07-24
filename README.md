@@ -20,23 +20,22 @@ The model is dealing with the business logic, the view layer with all the visual
 The game starts with splash screen that shows the loading process of the game.
 The screen gives the user a sense about what the game is going to be. Moreover, the screen shows some information about the game creators :
 
-![PreLoader jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/da1e8928-a6a4-4e3d-b577-da8063f09032)
+![PreLoader jpg](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/29a91365-af1b-4d58-9c6a-9d76a9e13aac)
 
 When the loader is finished, the home screen of the game is shown to the user with some videos of Tom and Jerry, a simple buttons to start the game and some helping bar menu on the top part of the screen :
 
-![HomeScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/ca0d388c-1f79-428f-8666-b6814618f55f)
+![HomeScreen jpg](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/15c4211d-0185-43cb-ae03-cfb65b39e466)
 
 When the user decides to start a game, after choosing the maze size or just using the defult size, the game starts :
 
-![GameScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/bc5e34bc-dda7-435f-9969-eb44019dfd68)
+![GameScreen jpg](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/3da52469-509f-4536-ab7e-f1916f0c1b49)
 
 In case the user succeded to reach the right end corner (where the cheese is at), the win screen is shown to the user. The screen includes some information about the maze, users total score etc :
 
-![WinScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/2f9cd2ad-ddea-423e-8299-2da30553a387)
-
+![WinScreen jpg](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/a9693f88-302d-4d39-a4bd-45d589ff1565)
 In case the user wants to read some additional information about the game, he can always choose the "About" button :
 
-![AboutScreen jpg](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/add672aa-74a2-43ec-8d6b-c34a5d77e212)
+![AboutScreen jpg](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/1e481992-a09d-4550-b4d0-0e6b34f1afe9)
 
 We hope you will have a greate time solving some mazes to help Jerry get his cheese ! :D
 
