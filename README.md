@@ -1,6 +1,6 @@
 # Maze Game project
 In this branch you can find our GUI source code
 
-![SecondReadMe](https://github.com/ilayc11/ATP-Project-PartB/assets/128902699/045ad882-3dfc-4ec6-a94d-854ced8a15b0)
+![SecondReadMe](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/435d2c04-8736-478a-b7ca-dfdb4a6b5365)
 
 
