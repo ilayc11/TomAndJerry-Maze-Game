@@ -2,7 +2,8 @@
 
 Game creators : Victor Gavrilenko & Ilay Cohen
 
-![SecondReadMe](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/435d2c04-8736-478a-b7ca-dfdb4a6b5365)
+![tom-jerry-mouse-maze](https://github.com/VictorGavrilenko97/TomAndJerry-Maze-Game/assets/140259266/61b0f5e0-e9b1-4aa6-b9c3-e8921d8fafd3)
+
 
 ### Intoduction
 This Tom and Jerry inspired maze game was our idea for the ATP (Advanced Topic In Programming) Course.
