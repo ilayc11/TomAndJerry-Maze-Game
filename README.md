@@ -39,7 +39,7 @@ In case the user wants to read some additional information about the game, he ca
 
 We hope you will have a greate time solving some mazes to help Jerry get his cheese ! :D
 
-
+We Have an UML sketch of the project in "Rough UML Sketch.pdf"
 
 
 
